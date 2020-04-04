@@ -4,9 +4,13 @@ const authController = require('../controllers/AuthController');
 const authMiddleware = require('../middlewares/AuthMiddleware');
 const authValidator = require('../validators/AuthValidators');
 const homepageController = require('../controllers/HomepageController');
+const mailController = require('../controllers/MailController');
 const passport = require('passport');
 
+
 router.get('/', homepageController.index);
+
+router.get('/send-mail', mailController.sendMail);
 
 router.get('/auth/login', authController.login);
 router.get('/auth/register', authController.register);

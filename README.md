@@ -21,11 +21,6 @@ cp .env.example .env
 knex migrate:latest
 ```
 
-4. Ejecuta las semillas del sistema
-```
-knex seed:run
-```
-
 ## Ejecución
 ```
 node server.js
